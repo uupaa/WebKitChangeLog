@@ -1,0 +1,56 @@
+<!DOCTYPE html><html><head><title>Live.js</title>
+<!--
+<meta name="viewport" content="width=device-width">
+ -->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta charset="utf-8"></head><body>
+<style>
+@import "ios.css";
+</style>
+<style>
+/*
+body { -webkit-text-size-adjust: 100%; }
+body { -webkit-user-select: none }
+ */
+</style>
+<br>
+<br>
+<br>
+<br>
+
+<a href="javascript:void(0)" class="prevent-zoom fake-button-ios">&lt;a&gt;</a>
+<div class="prevent-zoom fake-button-ios">&lt;div&gt;</div>
+<button class="prevent-zoom">&lt;button&gt;</button>
+<input type="button" class="prevent-zoom" value="&lt;input&gt;">
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident,
+sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<div id="counter" style="position:absolute;top:0;width:100px;height:20px;background-color:#eee">clicked: 0</div>
+
+<script>
+var counter = 0;
+function _onclick(event) {
+  event.preventDefault();  // 要素毎の規定の動作を抑止する
+  event.stopPropagation(); // イベントのバブリングを停止する
+  document.querySelector("#counter").textContent = "clicked: " + (++counter);
+}
+
+function _attchEvent() {
+  [].slice.call(document.querySelectorAll(".prevent-zoom")).forEach(function(node) {
+      node.addEventListener("mousedown", _onclick, false);
+      node.addEventListener("touchend", _onclick, false);
+  });
+}
+
+_attchEvent();
+</script>
+
+</body>
+</html>
+

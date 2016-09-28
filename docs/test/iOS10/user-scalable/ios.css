@@ -1,0 +1,23 @@
+.fake-button-ios {
+    -webkit-appearance: push-button;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    border: 1px solid rgb(76, 76, 76);
+    border-radius: 10px;
+    color: black;
+    cursor: default;
+    font: normal 11px/18px Helvetica;
+    margin: 2px;
+    padding: 0 11px 0 11px;
+    text-decoration: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+a.fake-button-ios:link { background-color: rgba(255, 255, 255, 0.00784314); }
+a.fake-button-ios:hover { background-color: rgba(255, 255, 255, 0.00784314); }
+a.fake-button-ios:active { background-color: rgba(255, 255, 255, 0.00784314); }
+a.fake-button-ios:visited { background-color: rgba(255, 255, 255, 0.00784314); }
+
